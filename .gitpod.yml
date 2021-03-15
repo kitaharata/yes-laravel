@@ -6,8 +6,6 @@ ports:
     onOpen: ignore
   - port: 33060
     onOpen: ignore
-  - port: 6379
-    onOpen: ignore
 tasks:
   - init: >
       composer install &&
