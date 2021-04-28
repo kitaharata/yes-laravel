@@ -29,7 +29,7 @@
             <ol>
                 @foreach ($posts as $post)
                 <li>
-                    <span class="time">{{ $post->created_at->format(DateTime::ATOM) }}</span>
+                    <b>{{ $post->created_at->format(DATE_ATOM) }}</b>
                      - - - - - 
                     {{ $contents[$post->content] }}
                 </li>
@@ -39,8 +39,8 @@
         <script>
 var time = document.querySelectorAll('.time');
 for (var i = 0; i < time.length; i++) {
-    document.querySelectorAll('.time')[i].innerText = new Date(
-        document.querySelectorAll('.time')[i].innerText
+    document.getElementsByTagName('b')[i].innerText = new Date(
+        document.getElementsByTagName('b')[i].innerText
     ).toLocaleString();
 }
         </script>
